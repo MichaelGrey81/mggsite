@@ -27,6 +27,16 @@ body {
   background: linear-gradient(to bottom, #2563eb, #1e40af);
 }
 
+/* Wave animation for music page */
+@keyframes wave {
+  0%, 100% { 
+    transform: scaleY(0.5); 
+  }
+  50% { 
+    transform: scaleY(1.5); 
+  }
+}
+
 /* Professional hover effects */
 .hover-lift {
   transition: all 0.3s ease;
@@ -47,6 +57,209 @@ body {
   transition-property: color, background-color, border-color, transform, box-shadow;
   transition-duration: 200ms;
   transition-timing-function: ease-in-out;
+}
+
+/* Dimensional Portals Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) scale(1);
+    opacity: 0.4;
+  }
+  25% {
+    transform: translateY(-30px) translateX(15px) scale(1.1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-60px) translateX(-10px) scale(1.2);
+    opacity: 1;
+  }
+  75% {
+    transform: translateY(-30px) translateX(-25px) scale(1.1);
+    opacity: 0.7;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.6), 0 0 60px rgba(59, 130, 246, 0.4);
+  }
+}
+
+@keyframes portal-energy {
+  0% {
+    transform: rotate(0deg) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+    opacity: 0.9;
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+    opacity: 0.6;
+  }
+}
+
+.animate-float {
+  animation: float linear infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.animate-portal-energy {
+  animation: portal-energy 6s ease-in-out infinite;
+}
+
+/* Chakra Meditation Animations */
+@keyframes chakra-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+    filter: brightness(1.3);
+  }
+}
+
+@keyframes chakra-energy-flow {
+  0% {
+    transform: rotate(0deg) scale(1);
+    box-shadow: 0 0 20px currentColor;
+  }
+  25% {
+    transform: rotate(90deg) scale(1.05);
+    box-shadow: 0 0 30px currentColor, 0 0 50px currentColor;
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+    box-shadow: 0 0 40px currentColor, 0 0 60px currentColor, 0 0 80px currentColor;
+  }
+  75% {
+    transform: rotate(270deg) scale(1.05);
+    box-shadow: 0 0 30px currentColor, 0 0 50px currentColor;
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+    box-shadow: 0 0 20px currentColor;
+  }
+}
+
+@keyframes water-ripple {
+  0% {
+    transform: scale(0);
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+@keyframes ethereal-float {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+    opacity: 0.6;
+    filter: blur(0px);
+  }
+  25% {
+    transform: translateY(-15px) translateX(8px) rotate(90deg);
+    opacity: 0.9;
+    filter: blur(0.5px);
+  }
+  50% {
+    transform: translateY(-25px) translateX(-3px) rotate(180deg);
+    opacity: 1;
+    filter: blur(0px);
+  }
+  75% {
+    transform: translateY(-10px) translateX(-12px) rotate(270deg);
+    opacity: 0.7;
+    filter: blur(0.5px);
+  }
+}
+
+@keyframes meditation-glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(147, 197, 253, 0.3);
+    filter: brightness(1);
+  }
+  33% {
+    box-shadow: 0 0 25px rgba(34, 197, 94, 0.5), 0 0 40px rgba(34, 197, 94, 0.3);
+    filter: brightness(1.2);
+  }
+  66% {
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.6), 0 0 50px rgba(168, 85, 247, 0.4);
+    filter: brightness(1.4);
+  }
+}
+
+@keyframes body-outline-pulse {
+  0%, 100% {
+    stroke-opacity: 0.2;
+    stroke-width: 1;
+  }
+  50% {
+    stroke-opacity: 0.4;
+    stroke-width: 1.5;
+  }
+}
+
+@keyframes energy-connection {
+  0% {
+    stroke-dasharray: 5, 10;
+    stroke-dashoffset: 0;
+    opacity: 0.3;
+  }
+  50% {
+    stroke-dasharray: 10, 5;
+    stroke-dashoffset: -15;
+    opacity: 0.7;
+  }
+  100% {
+    stroke-dasharray: 5, 10;
+    stroke-dashoffset: -30;
+    opacity: 0.3;
+  }
+}
+
+/* Chakra animation classes */
+.animate-chakra-pulse {
+  animation: chakra-pulse 4s ease-in-out infinite;
+}
+
+.animate-chakra-energy {
+  animation: chakra-energy-flow 8s linear infinite;
+}
+
+.animate-water-ripple {
+  animation: water-ripple 3s ease-out infinite;
+}
+
+.animate-ethereal-float {
+  animation: ethereal-float 12s ease-in-out infinite;
+}
+
+.animate-meditation-glow {
+  animation: meditation-glow 6s ease-in-out infinite;
+}
+
+.animate-body-outline {
+  animation: body-outline-pulse 3s ease-in-out infinite;
+}
+
+.animate-energy-connection {
+  animation: energy-connection 4s linear infinite;
 }
 
 /* Focus states for accessibility */
@@ -72,4 +285,233 @@ a:focus {
     background: white !important;
     border: 1px solid #e5e7eb !important;
   }
+}
+
+/* Responsive chakra sizing */
+@media (max-width: 768px) {
+  .chakra-hover-effect:hover {
+    transform: scale(1.1);
+  }
+}
+
+/* Accessibility enhancements */
+@media (prefers-reduced-motion: reduce) {
+  .animate-chakra-pulse,
+  .animate-chakra-energy,
+  .animate-water-ripple,
+  .animate-ethereal-float,
+  .animate-meditation-glow,
+  .animate-body-outline,
+  .animate-energy-connection {
+    animation: none;
+  }
+  
+  .chakra-hover-effect {
+    transition: none;
+  }
+}
+
+/* Ripple Animations for Dimensional Portals */
+@keyframes ripple-0 {
+  0% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1.3);
+    opacity: 0;
+  }
+}
+
+@keyframes ripple-1 {
+  0% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes ripple-2 {
+  0% {
+    transform: scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+/* Warp Transition Effect */
+.warp-transition {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: screen;
+}
+
+/* Enhanced Float Animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.6;
+  }
+  25% {
+    transform: translateY(-10px) rotate(90deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+    opacity: 1;
+  }
+  75% {
+    transform: translateY(-10px) rotate(270deg);
+    opacity: 0.8;
+  }
+}
+
+/* Portal page loading states - force hidden until animation starts */
+.portal-loading {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transform: scale(0.1) !important;
+  filter: blur(20px) !important;
+  pointer-events: none !important;
+}
+
+.portal-container-loading {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+.portal-gateway-loading {
+  opacity: 0 !important;
+  transform: scale(0.1) !important;
+  filter: blur(20px) !important;
+}
+
+/* Professional page - force hide text until particles are established */
+.hero-hidden {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+.text-hidden {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  filter: blur(10px) !important;
+  transform: translateY(30px) !important;
+}
+
+/* Ensure particles canvas is always visible */
+.particle-canvas {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Warp Transition Animation for Portal Navigation */
+.warp-transition {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.8) 0%, rgba(139, 92, 246, 0.4) 30%, transparent 70%);
+  border-radius: 50%;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.warp-transition.active {
+  width: 300vw;
+  height: 300vh;
+  opacity: 1;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.9) 0%, rgba(139, 92, 246, 0.6) 20%, rgba(30, 41, 59, 0.8) 50%, rgba(15, 23, 42, 1) 80%);
+}
+
+/* Meditation Entrance Effect */
+.meditation-entrance {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background: conic-gradient(from 0deg, transparent, rgba(139, 92, 246, 0.6), transparent);
+  border-radius: 50%;
+  z-index: 10000;
+  pointer-events: none;
+  opacity: 0;
+  animation: none;
+  transition: all 0.6s ease-out;
+}
+
+.meditation-entrance.active {
+  width: 200px;
+  height: 200px;
+  opacity: 1;
+  animation: spin 2s linear infinite;
+  background: conic-gradient(from 0deg, 
+    rgba(139, 92, 246, 0.8), 
+    rgba(99, 102, 241, 0.6), 
+    rgba(59, 130, 246, 0.4), 
+    rgba(16, 185, 129, 0.6), 
+    rgba(245, 158, 11, 0.8), 
+    rgba(139, 92, 246, 0.8)
+  );
+}
+
+/* Chakra Button Glow Effect */
+.chakra-button-glow {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.9), rgba(99, 102, 241, 0.8));
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.chakra-button-glow::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: conic-gradient(from 0deg, 
+    rgba(139, 92, 246, 0.6), 
+    rgba(99, 102, 241, 0.4), 
+    rgba(59, 130, 246, 0.3), 
+    rgba(16, 185, 129, 0.4), 
+    rgba(245, 158, 11, 0.6), 
+    rgba(139, 92, 246, 0.6)
+  );
+  border-radius: inherit;
+  z-index: -1;
+  animation: spin 3s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.chakra-button-glow:hover::before {
+  opacity: 1;
 }
